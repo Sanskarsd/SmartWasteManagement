@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Capture Button -->
+
+    <Button
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capture Image"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:onClick="btnCapture" />
+
+    <!-- ImageView to display captured image -->
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="center"
+        android:src="@drawable/default_imge_alert"
+        android:background="@drawable/image_border"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Alert"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:onClick="sentAlert" />
+
+</LinearLayout>

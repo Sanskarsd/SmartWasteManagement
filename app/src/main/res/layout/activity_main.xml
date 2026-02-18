@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_main"
+    tools:context=".MainActivity">
+
+    <!-- Upper section: Content with TextView and ImageButton -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey , Atharv!"
+            android:onClick="openUserProfile"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:id="@+id/TitleName"
+            android:textColor="#000000" />
+
+        <!-- ImageButton -->
+        <ImageButton
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/userProfileIcon"
+            android:onClick="openRegister1"
+            android:background="@drawable/profile"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <!-- Bottom section: background with a fixed height -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_background"
+        android:orientation="vertical">
+
+        <!-- Inner LinearLayout to hold the image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/banner_background"
+            android:layout_margin="30dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart Waste"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                android:textSize="25dp"/>
+
+            <!-- FrameLayout to stack the images -->
+            <FrameLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp">
+
+                <!-- Circle image as the background -->
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/circle_white"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+
+                <!-- Human image on top of the circle -->
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/recycling"
+                    android:padding="20dp"
+                    android:onClick="openDustbin"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="12dp"
+            android:elevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:textSize="15dp"
+                    android:onClick="openEmployee"
+                    android:layout_marginLeft="20dp"
+                    android:text="See your Rank here..">
+
+                </TextView>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="15dp"
+                    android:onClick="openAdmin"
+                    android:layout_weight="1"
+                    android:src="@drawable/rank">
+
+                </ImageView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What do you need?"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="32dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/gridView"
+                android:numColumns="3"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="click here to "
+                android:textStyle="italic"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:layout_marginStart="32dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" download certificate"
+                android:textStyle="bold|italic"
+                android:onClick="downloadCertificate"
+                android:textSize="16dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/black">
+        </View>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smart Waste, Smart Future!"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:onClick="openSample"
+            android:textStyle="bold|italic"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="32dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginHorizontal="20dp">
+
+        </View>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartWasteManagement"
+        tools:targetApi="31">
+        <activity
+            android:name=".SellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowAllInfoSellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MarketPlace"
+            android:exported="false" />
+        <activity
+            android:name=".Management_Waste_Alert"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterEmployee3"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterEmployee2"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterEmployee1"
+            android:exported="false" />
+        <activity
+            android:name=".ManagementCertificateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Management_Statistics"
+            android:exported="false" />
+        <activity
+            android:name=".UserAboutPointsA"
+            android:exported="false" />
+        <activity
+            android:name=".ManagementCustomizePoints"
+            android:exported="false" />
+        <activity
+            android:name=".ManagementProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Management_View_Map"
+            android:exported="false" />
+        <activity
+            android:name=".Management_Leaderboard"
+            android:exported="false" />
+        <activity
+            android:name=".Management_dustbin_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User_Leaderboard"
+            android:exported="false" />
+        <activity
+            android:name=".UserShowDustbinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Customize_user_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".UserCarLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Other activities -->
+        <activity
+            android:name=".RegisterEmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Employee_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".User_sendEventRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WasteDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".History"
+            android:exported="false" />
+        <activity
+            android:name=".WasteAlertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Signup_Map_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".ManagementMainActivity"
+            android:exported="false" /> <!-- Removed MainActivity's launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

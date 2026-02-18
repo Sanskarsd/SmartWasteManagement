@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map</title>
+    <!-- Leaflet.js CDN for styling and functionality -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        /* Style the map */
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    // Initialize the map, centered on India
+    var map = L.map('map').setView([20.5937, 78.9629], 5);
+
+    // Add OpenStreetMap tiles to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Variable to hold the marker
+    var carMarker = null;
+
+    // Function to show the car location on the map
+    function showCarLocation(lat, lon) {
+        // Remove the previous marker if it exists
+        if (carMarker) {
+            map.removeLayer(carMarker);
+        }
+
+        // Add a new marker for the latest location
+        carMarker = L.marker([lat, lon]).addTo(map)
+            .bindPopup("Car Location")
+            .openPopup();
+
+        // Center the map on the new marker
+        map.setView([lat, lon], 13); // Zoom level 13 is a good close-up view
+    }
+</script>
+</body>
+</html>
